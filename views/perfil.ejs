@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/header.ejs'); -%>
+    <title><%= perfil.nombre %></title>
+</head>
+<body>
+    <%- include('./partials/navbar.ejs'); -%>
+    <div class="row">
+        <div class="col s12 m8 l9">
+            <div class="container">
+                <div class="responsive-img">
+                    <img src="<%= perfil.foto %>" alt="" class="responsive-img">
+                </div>
+                <h2><%= perfil.nombre %></h2>
+                <div class="container">
+                    <p><%= perfil.descripcion %></p>
+                </div>
+            </div>
+        </div>
+  
+        <div class="col s12 m4 l3">
+            <div class="row">
+                  <div class="card light-green darken-4">
+                    <div class="card-content white-text">
+                      <span class="card-title">Contacto</span>
+                      <p>Puede contactar con <% perfil.nombre %> con los siguientes enlaces.</p>
+                      <ul>
+                          <li>Numero de telefono: <%= perfil.telefono %></li>
+                          <li>Pagina de Facebook: <a class="waves-effect waves-light btn indigo darken-1" src="<%= perfil.facebook %>">Ir</a></li>
+                          <li>Sitio Web: <a class="waves-effect waves-light btn indigo darken-1" src="<%= perfil.web %>">Ir</a></li>
+                      </ul>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="carusel">
+        <% publicaciones.map(item =>{ %>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-image">
+                  <img src="<%= item.data.imagen %>">
+                  
+                </div>
+                <div class="card-content">
+                    <span class="card-title"><%= item.data.titulo %></span>
+                  <p><%= item.data.descripcion %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+            <% })%>
+      </div>
+    <%- include('./partials/footer.ejs'); -%>
+</body>
+</html>

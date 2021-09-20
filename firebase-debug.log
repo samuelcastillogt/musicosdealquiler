@@ -1,0 +1,21 @@
+[debug] [2021-09-16T23:03:05.514Z] ----------------------------------------------------------------------
+[debug] [2021-09-16T23:03:05.561Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Carlitos\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-09-16T23:03:05.562Z] CLI Version:   8.12.1
+[debug] [2021-09-16T23:03:05.562Z] Platform:      win32
+[debug] [2021-09-16T23:03:05.562Z] Node Version:  v12.18.4
+[debug] [2021-09-16T23:03:05.564Z] Time:          Thu Sep 16 2021 17:03:05 GMT-0600 (GMT-06:00)
+[debug] [2021-09-16T23:03:05.564Z] ----------------------------------------------------------------------
+[debug] [2021-09-16T23:03:05.565Z] 
+[debug] [2021-09-16T23:03:05.640Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-16T23:03:05.642Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Carlitos\Desktop\proyectos web\musicos de alq
+
