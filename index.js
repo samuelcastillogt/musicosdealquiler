@@ -3,7 +3,7 @@ const app = express()
 const path = require("path")
 const admin = require('firebase-admin');
 app.set("view engine", "ejs")
-app.set("views", "./views")
+app.set("views", "views")
 app.use(express.static(path.join(__dirname, 'public')))
 const key = require('./path/serviceAccountKey.json');
 admin.initializeApp({
