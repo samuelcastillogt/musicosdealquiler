@@ -29,9 +29,9 @@
                       <span class="card-title">Contacto</span>
                       <p>Puede contactar con <% perfil.nombre %> con los siguientes enlaces.</p>
                       <ul>
-                          <li>Numero de telefono: <%= perfil.telefono %></li>
-                          <li>Pagina de Facebook: <a class="waves-effect waves-light btn indigo darken-1" src="<%= perfil.facebook %>">Ir</a></li>
-                          <li>Sitio Web: <a class="waves-effect waves-light btn indigo darken-1" src="<%= perfil.web %>">Ir</a></li>
+                          <li>Numero de telefono: <span class="new badge"><%= perfil.telefono %></span></li>
+                          <li>Pagina de Facebook: <a class="waves-effect waves-light btn indigo darken-1" href="<%= perfil.facebook %>">Ir</a></li>
+                          <li>Sitio Web: <a class="waves-effect waves-light btn indigo darken-1" href="<%= perfil.web %>">Ir</a></li>
                       </ul>
                     </div>
                     
