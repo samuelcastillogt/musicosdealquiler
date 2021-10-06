@@ -29,6 +29,12 @@ app.get("/musican/:id", async(req, res)=>{
   }
   res.render("perfil.ejs", info)
 })
+app.get("/category/:categoria", async(req, res)=>{
+  const { categoria } = req.params
+  const { docs } = await musicosList.where("categoria", "==", categoria).get()
+  const publicaciones = docs.map(doc=>({id: doc.id, data: doc.data()}))
+  res.send(publicaciones)
+})
 ///////api///////
 app.get("/api/create", (req, res)=>{
   musicosList.doc().set({
