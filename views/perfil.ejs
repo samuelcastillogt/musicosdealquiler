@@ -29,7 +29,7 @@
                       <span class="card-title">Contacto</span>
                       <p>Puede contactar con <% perfil.nombre %> con los siguientes enlaces.</p>
                       <ul>
-                          <li>Numero de telefono: <span class="badge"><%= perfil.telefono %></span></li>
+                          <li>Numero de telefono: <a class="waves-effect waves-light btn indigo darken-1" href="tel:<%= perfil.telefono %>">Telefono</a></li>
                           <li>Pagina de Facebook: <a class="waves-effect waves-light btn indigo darken-1" href="<%= perfil.facebook %>">Ir</a></li>
                           <li>Sitio Web: <a class="waves-effect waves-light btn indigo darken-1" href="<%= perfil.web %>">Ir</a></li>
                       </ul>
