@@ -32,8 +32,8 @@ app.get("/musican/:id", async(req, res)=>{
 app.get("/category/:categoria", async(req, res)=>{
   const { categoria } = req.params
   const { docs } = await musicosList.where("categoria", "==", categoria).get()
-  const publicaciones = docs.map(doc=>({id: doc.id, data: doc.data()}))
-  res.render("categoria", publicaciones)
+  const data = docs.map(doc=>({id: doc.id, data: doc.data()}))
+  res.render("categoria", data)
 })
 ///////api///////
 app.get("/api/create", (req, res)=>{
