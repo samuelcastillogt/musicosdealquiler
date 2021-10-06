@@ -16,31 +16,18 @@
 </head>
 <body>
     <%- include('./partials/navbar.ejs'); -%>
-    <div class="hero-container">
-        <div class="hero">
-            <div class="hero-content container">
-                <h1 class="hero-title">Mariachis Guatemala</h1>
-                <p class="h1">Ofertas, numeros de telefono en cualquier zona <b>de Guatemala</b>.</p>
-            </div>
-        </div>
-    </div>
+
     
-    <div class="container">
-        <h2>Ahora puede contratar a los mejores mariachis de Guatemala</h2>
-        <p>Encuentre el <b>Numero de telefono</b> de miles de <b>mariachis en Guatemala</b>, todos certificados
-            y verificados. 
-        </p>
-    </div>
     <section class="tarjetero">
         <% data.map(item =>{ %>
             <div class="row">
                 <div >
                     <div class="card light-green white-text">
                         <div class="card-image">
-                            <img src="<%= item.foto %>" alt="">
+                            <img src="<%= item.data.foto %>" alt="">
                         </div>
                         <div class="card-content">
-                            <h2 class="card-title"><%= item.nombre %></h2>
+                            <h2 class="card-title"><%= item.data.nombre %></h2>
                             <a class="waves-effect waves-light btn" href="/musican/<%= item.id %>">Ver Perfil</a>
                         </div>
                     </div>

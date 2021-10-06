@@ -15,8 +15,7 @@ const ofertasList = db.collection('ofertas')
 app.get("/", async(req, res)=>{
        const {docs}= await musicosList.get()
        const datos = docs.map(doc=>({id: doc.id, data: doc.data()}))
-        res.render("index.ejs", { datos })
-        
+        res.render("index.ejs", { datos })       
 })
 app.get("/musican/:id", async(req, res)=>{
   const { id } = req.params
@@ -33,7 +32,8 @@ app.get("/category/:categoria", async(req, res)=>{
   const { categoria } = req.params
   const { docs } = await musicosList.where("categoria", "==", categoria).get()
   const data = docs.map(doc=>({id: doc.id, data: doc.data()}))
-  res.render("categoria", data)
+  console.log(data)
+  res.render("categoria", {data})
 })
 ///////api///////
 app.get("/api/create", (req, res)=>{
